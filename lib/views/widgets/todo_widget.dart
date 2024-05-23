@@ -29,12 +29,12 @@ class _ToDoItemState extends State<ToDoItem> {
       child: ListTile(
         leading: widget.todo.check
             ? Icon(
-                Icons.circle_outlined,
+                Icons.square_outlined,
                 color: Colors.blue,
               )
             : Icon(
-                Icons.check_circle,
-                color: Colors.green,
+                Icons.check_box,
+                color: Colors.blue,
               ),
         title: Text(widget.todo.title,
             style: widget.todo.check

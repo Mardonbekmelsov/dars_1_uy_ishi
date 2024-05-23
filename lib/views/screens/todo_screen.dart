@@ -46,26 +46,22 @@ class _ToDoScreenState extends State<ToDoScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leadingWidth: 170,
-        leading: Row(
+        title: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
-            SizedBox(width: 15),
             Text(
               "Finished: ${counter()[0]}",
               style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
             ),
+            const Text("ToDo"),
+            Text(
+              "Not Finished: ${counter()[1]}",
+              style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
+            ),
           ],
         ),
-        title: const Text("ToDo"),
         // centerTitle: true,
         titleSpacing: 1,
-        actions: [
-          Text(
-            "Not Finished: ${counter()[1]}",
-            style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
-          ),
-          SizedBox(width: 15),
-        ],
       ),
       body: ListView.builder(
           itemCount: toDoController.lst.length,
